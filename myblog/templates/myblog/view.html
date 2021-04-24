@@ -1,0 +1,11 @@
+{%  extends 'myblog/base_login.html' %}
+
+{% block content %}
+    {% for item in ds %}
+        <h2><b>{{ item.title }}</b></h2>
+        <br>
+        <p>{{ item.content }}</p>
+        <br>
+        <img src="{{ item.image.url }}" alt="img">
+    {% endfor %}
+{% endblock %}

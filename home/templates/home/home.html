@@ -1,0 +1,9 @@
+{% extends 'home/base.html' %}
+
+{% block content  %}
+    {% for item in ds_list %}
+        <a href="{% url 'myblog:view' %}">{{ item.title }}</a>
+        <img src="{{ item.image.url }}" alt="img" width="50%">
+        <br>
+    {% endfor %}
+{% endblock %}

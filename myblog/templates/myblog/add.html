@@ -1,0 +1,10 @@
+{% extends 'myblog/base_login.html' %}
+{% block content %}
+    <form action="{% url 'myblog:saves' %}" method="post">
+        %{ csrf_token %}
+        <p>f.title</p>
+        <p>f.content</p>
+        <input type="file" value="filetoUpload" id="filetoUpload">
+        <input type="submit" value="Add">
+    </form>
+{% endblock %}
